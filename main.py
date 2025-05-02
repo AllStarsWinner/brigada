@@ -613,7 +613,12 @@ async def cmd_pib(message: Message, state: FSMContext):
     await state.update_data(PIB=message.text)
     await message.answer("""🗓 Дата народження
 
-ℹ️ у форматі дд-мм-рррр""")
+ℹ️ у форматі дд-мм-рррр
+
+
+ЗВЕРНІТЬ УВАГУ!!! 
+Вам має бути 18+ років щоб далі заповнити анкету
+Приклад: 12-12-2000""")
     await state.set_state(RecruitingForm.birth)
 def is_valid_birthdate(date_text: str) -> bool:
     try:
@@ -627,7 +632,9 @@ def is_valid_birthdate(date_text: str) -> bool:
 @dp.message(RecruitingForm.birth)
 async def cmd_birth(message: Message, state: FSMContext):
     if not is_valid_birthdate(message.text):
-        await message.answer("Увведіть будь ласка корректну дату народження")
+        await message.answer("""Введіть правильну дату народження за форматом 12-12-2000
+        Вам має бути більше 18 років щоб продовжити""")
+
         return
 
     await state.update_data(birth=message.text)
