@@ -694,7 +694,7 @@ async def cmd_posada(message: Message, state: FSMContext):
     await state.set_state(RecruitingForm.komentar)
 
 
-@dp.message(F.text == 'Про бригаду Фенікс')
+@dp.message(F.text == 'Слово комбрига')
 async def cmd_kombrig(message: Message):
     await bot.send_photo(chat_id=message.chat.id, photo=FSInputFile('комбриг.png'))
     await message.answer("""Хочешь бути корисним для своєї країни? 
