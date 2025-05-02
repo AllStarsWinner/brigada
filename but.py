@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 main = ReplyKeyboardMarkup(
     keyboard=[
@@ -13,5 +13,12 @@ main = ReplyKeyboardMarkup(
         [KeyboardButton(text="Військовий психолог")], [KeyboardButton(text="Поліграфолог")],
         [KeyboardButton(text="SMM-менеджер")], [KeyboardButton(text="Фінансист")],
         [KeyboardButton(text="Фахівець з публічних закупівель")], [KeyboardButton(text="Графічний дизайнер")],
+        [KeyboardButton(text="Назад")],
         ]
+)
+
+back = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="Назад")],
+    ]
 )

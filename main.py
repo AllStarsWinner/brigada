@@ -608,6 +608,10 @@ async def cmd_anketa(message: Message, state: FSMContext):
     await state.set_state(RecruitingForm.PIB)
 
 
+@dp.message(F.text == 'Назад')
+async def cmd_back(message: Message):
+    await message.answer("Назад",reply_markup=but.main)
+
 @dp.message(RecruitingForm.PIB)
 async def cmd_pib(message: Message, state: FSMContext):
     await state.update_data(PIB=message.text)
@@ -712,7 +716,7 @@ async def cmd_komentar(message: Message, state: FSMContext):
           f"💬 Коментар: {data['komentar']}\n"
     )
 
-    await message.answer("✅ Дякуємо! Вашу анкету надіслано. Очікуйте на відповідь.")
+    await message.answer("✅ Дякуємо! Вашу анкету надіслано. Очікуйте на відповідь.", reply_markup=but.main)
     await bot.send_message(chat_id=ADMIN_CHAT_ID, text=user_data_message)
     await state.clear()
 
