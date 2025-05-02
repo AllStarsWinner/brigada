@@ -603,7 +603,7 @@ async def dyzayner(message: Message, state: FSMContext):
 async def cmd_anketa(message: Message, state: FSMContext):
     await message.answer("""📑 Анкета
 
-Надайте відповідь на наступні запитання 👇""", reply_markup=ReplyKeyboardRemove())
+Надайте відповідь на наступні запитання 👇""", reply_markup=but.main())
     await message.answer("Прізвище ім'я по-батькові")
     await state.set_state(RecruitingForm.PIB)
 
