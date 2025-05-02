@@ -622,7 +622,7 @@ async def cmd_pib(message: Message, state: FSMContext):
 
 ЗВЕРНІТЬ УВАГУ!!! 
 Вам має бути 18+ років щоб далі заповнити анкету
-Приклад: 12-12-2000""")
+Приклад: 12-12-2000""", reply_markup=but.main)
     await state.set_state(RecruitingForm.birth)
 def is_valid_birthdate(date_text: str) -> bool:
     try:
@@ -694,18 +694,6 @@ async def cmd_posada(message: Message, state: FSMContext):
     await state.set_state(RecruitingForm.komentar)
 
 
-@dp.message(F.text == 'Слово комбрига')
-async def cmd_kombrig(message: Message):
-    await bot.send_photo(chat_id=message.chat.id, photo=FSInputFile('комбриг.png'))
-    await message.answer("""Хочешь бути корисним для своєї країни? 
-Готовий її захищати?
-Згоден опановувати нові навички?
-ПРИЄДНУЙСЯ ДО НАС!!!
-
-Україна чекає на тебе
-
-Командир бригади Дмитро Олексюк""")
-
 
 
 
@@ -731,6 +719,18 @@ async def cmd_komentar(message: Message, state: FSMContext):
     await bot.send_message(chat_id=ADMIN_CHAT_ID, text=user_data_message)
     await state.clear()
 
+
+@dp.message(F.text == 'Слово комбрига')
+async def cmd_kombrig(message: Message):
+    await bot.send_photo(chat_id=message.chat.id, photo=FSInputFile('комбриг.png'))
+    await message.answer("""Хочешь бути корисним для своєї країни? 
+Готовий її захищати?
+Згоден опановувати нові навички?
+ПРИЄДНУЙСЯ ДО НАС!!!
+
+Україна чекає на тебе
+
+Командир бригади Дмитро Олексюк""")
 
 
 
