@@ -681,7 +681,7 @@ async def cmd_city(message: Message, state: FSMContext):
 
     await message.answer("""📋 Бажана посада
 
-ℹ️ оберіть за допомогою кнопок 👇""", reply_markup=kb)
+ℹ️ оберіть за допомогою кнопок 👇""", reply_markup=but.main)
     await state.set_state(RecruitingForm.posada)
 
 
@@ -694,6 +694,17 @@ async def cmd_posada(message: Message, state: FSMContext):
     await state.set_state(RecruitingForm.komentar)
 
 
+@dp.message(F.text == 'Про бригаду Фенікс')
+async def cmd_kombrig(message: Message):
+    await bot.send_photo(chat_id=message.chat.id, photo=FSInputFile('комбриг.png'))
+    await message.answer("""Хочешь бути корисним для своєї країни? 
+Готовий її захищати?
+Згоден опановувати нові навички?
+ПРИЄДНУЙСЯ ДО НАС!!!
+
+Україна чекає на тебе
+
+Командир бригади Дмитро Олексюк""")
 
 
 

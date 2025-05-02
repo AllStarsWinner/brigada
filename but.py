@@ -2,7 +2,8 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 main = ReplyKeyboardMarkup(
     keyboard=[
-        [KeyboardButton(text="Відправити анкету")],
+        [KeyboardButton(text="Відправити анкету")], [KeyboardButton(text='Слово комбрига')],
+        [KeyboardButton(text="Про бригаду Фенікс")],
         [KeyboardButton(text="Інженер БпЛА")], [KeyboardButton(text="Технік БпЛА")],
         [KeyboardButton(text="Водій екіпажу БпЛА")], [KeyboardButton(text="Інженер-сапер БпЛА")],
         [KeyboardButton(text="Бойовий медик")], [KeyboardButton(text="Оператор РЕБ/РЕР")],
