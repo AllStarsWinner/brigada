@@ -1,4 +1,4 @@
-from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardMarkup
 
 main = ReplyKeyboardMarkup(
     keyboard=[
@@ -14,5 +14,20 @@ main = ReplyKeyboardMarkup(
         [KeyboardButton(text="Військовий психолог")], [KeyboardButton(text="Поліграфолог")],
         [KeyboardButton(text="SMM-менеджер")], [KeyboardButton(text="Фінансист")],
         [KeyboardButton(text="Фахівець з публічних закупівель")], [KeyboardButton(text="Графічний дизайнер")],
+    ]
+)
+
+pos = ReplyKeyboardMarkup(
+    keyboard=[
+        [KeyboardButton(text="інженер БпЛА")], [KeyboardButton(text="технік БпЛА")],
+        [KeyboardButton(text="водій екіпажу БпЛА")], [KeyboardButton(text="інженер-сапер БпЛА")],
+        [KeyboardButton(text="бойовий медик")], [KeyboardButton(text="оператор РЕБ/РЕР")],
+        [KeyboardButton(text="майстер-вибухотехник Бпла")], [KeyboardButton(text="майстер з ремонту БпЛА")],
+        [KeyboardButton(text="діловод")], [KeyboardButton(text="відеооператор-режисер монтажу")],
+        [KeyboardButton(text="черговий пункту управління")], [KeyboardButton(text="інструктор БпЛА")],
+        [KeyboardButton(text="зв'язківець (ІТ-напрямок)")], [KeyboardButton(text="зв'язківець (Радіозв'язок)")],
+        [KeyboardButton(text="військовий психолог")], [KeyboardButton(text="поліграфолог")],
+        [KeyboardButton(text="SMM-Менеджер")], [KeyboardButton(text="фінансист")],
+        [KeyboardButton(text="фахівець з публічних закупівель")], [KeyboardButton(text="графічний дизайнер")],
     ]
 )

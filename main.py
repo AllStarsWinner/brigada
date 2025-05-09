@@ -11,14 +11,14 @@ import re
 import but
 
 
-
+#7131545198
 
 # Ініціалізація бота
 bot = Bot(token='8031989999:AAGu7uJeZkTjJyzVnEjLoNphRfGvzQjoC3c')
 dp = Dispatcher(storage=MemoryStorage())  # Обов’язково додати storage
 
 # ID адміна
-ADMIN_CHAT_ID = 7131545198
+ADMIN_CHAT_ID = 6155988964
 
 # Стани анкети
 class RecruitingForm(StatesGroup):
@@ -681,7 +681,7 @@ async def cmd_city(message: Message, state: FSMContext):
 
     await message.answer("""📋 Бажана посада
 
-ℹ️ оберіть за допомогою кнопок 👇""", reply_markup=but.main)
+ℹ️ оберіть за допомогою кнопок 👇""", reply_markup=but.pos)
     await state.set_state(RecruitingForm.posada)
 
 
