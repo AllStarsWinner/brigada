@@ -18,7 +18,7 @@ bot = Bot(token='8031989999:AAGu7uJeZkTjJyzVnEjLoNphRfGvzQjoC3c')
 dp = Dispatcher(storage=MemoryStorage())  # Обов’язково додати storage
 
 # ID адміна
-ADMIN_CHAT_ID = 6155988964
+ADMIN_CHAT_ID = 892519055
 
 # Стани анкети
 class RecruitingForm(StatesGroup):
