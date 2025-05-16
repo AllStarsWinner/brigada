@@ -9,7 +9,7 @@ from aiogram.fsm.context import FSMContext
 import datetime
 import re
 from aiogram.utils.keyboard import InlineKeyboardBuilder
-
+from aiogram.enums import ParseMode
 import but
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
@@ -30,8 +30,8 @@ ADMIN_CHAT_ID = 892519055
 
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
-    await message.answer("Вітаємо в боті для рекруту в бригаду Фенікс! Заповніть анкету та ознайомтеся з вакансіями.", reply_markup=but.main_inline)
-
+    await message.answer("""Твоя сила — наша перевага!
+Вітаємо в боті бригади “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 
 
@@ -43,6 +43,7 @@ async def cmd_heart(callback: CallbackQuery):
 @dp.callback_query(F.data =='word_commander')
 async def cmd_heart(callback: CallbackQuery):
     await callback.message.edit_text("""Хочешь бути корисним для своєї країни? 
+    
 Готовий її захищати?
 Згоден опановувати нові навички?
 ПРИЄДНУЙСЯ ДО НАС!!!
@@ -52,17 +53,30 @@ async def cmd_heart(callback: CallbackQuery):
 Командир бригади Дмитро Олексюк
 Подати анкету можна на сайті https://fxdpsu.com або у боті""", reply_markup=but.back)
 
+
+@dp.callback_query(F.data =='viz')
+async def cmd_heart(callback: CallbackQuery):
+    await callback.message.edit_text(text.link, reply_markup=but.back)
+
 @dp.callback_query(F.data =='about_phoenix')
 async def cmd_heart(callback: CallbackQuery):
-    await callback.message.edit_text(text.about, reply_markup=but.back)
+    await callback.message.edit_text(text.about,parse_mode=ParseMode.HTML, reply_markup=but.back)
+
+@dp.callback_query(F.data =='perevag')
+async def cmd_asd(callback: CallbackQuery):
+    await callback.message.edit_text(text.perevag, reply_markup=but.back)
 
 
-
+@dp.callback_query(F.data == 'channel')
+async def cmd_heart(callback: CallbackQuery):
+    await callback.message.edit_text("""Щоб знати найсвіжіші новини та бачити статистику знищених ворожих сил, рекомендуємо підписатися на наш телеграм канал.
+Посилання: https://t.me/feniksdpsu""", reply_markup=but.back)
 
 
 @dp.callback_query(F.data =='back')
 async def cmd_start(callback: CallbackQuery):
-    await callback.message.edit_text("Вітаємо в боті для рекруту в бригаду Фенікс! Заповніть анкету та ознайомтеся з вакансіями.", reply_markup=but.main_inline)
+    await callback.message.edit_text("""Твоя сила — наша перевага!
+Вітаємо в боті бригади “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 # Стани анкети
 class RecruitingForm(StatesGroup):
