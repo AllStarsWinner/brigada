@@ -35,7 +35,6 @@ async def cmd_start(message: Message):
 
 
 
-
 @dp.callback_query(F.data =='vacancies')
 async def cmd_heart(callback: CallbackQuery):
     await callback.message.edit_text("Дізнайтеся більше про посаду мрії, натиснувши на кнопки снизу",reply_markup=but.inline)
