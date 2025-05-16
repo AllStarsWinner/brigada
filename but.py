@@ -3,7 +3,8 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 main_inline = InlineKeyboardMarkup(inline_keyboard=[
     [InlineKeyboardButton(text="Слово комбрига", callback_data="word_commander")],
     [InlineKeyboardButton(text="Про бригаду Фенікс", callback_data="about_phoenix")],
-    [InlineKeyboardButton(text="Вакансії", callback_data="vacancies")]
+    [InlineKeyboardButton(text="Вакансії", callback_data="vacancies")],
+    [InlineKeyboardButton(text="Відправити анкету", callback_data="anketa")]
 ])
 
 
@@ -14,9 +15,6 @@ back = InlineKeyboardMarkup(inline_keyboard=[
 
 
 
-anketa = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="Відправити анкету", callback_data="anketa")],
-])
 
 inline = InlineKeyboardMarkup(
     inline_keyboard=[

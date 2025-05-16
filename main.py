@@ -31,7 +31,10 @@ ADMIN_CHAT_ID = 892519055
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer("Вітаємо в боті для рекруту в бригаду Фенікс! Заповніть анкету та ознайомтеся з вакансіями.", reply_markup=but.main_inline)
-    await message.answer("Якщо бажаєте відправити анкету, натисніть на кнопку нижче 👇", reply_markup=but.anketa)
+
+
+
+
 
 @dp.callback_query(F.data =='vacancies')
 async def cmd_heart(callback: CallbackQuery):
