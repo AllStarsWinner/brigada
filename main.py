@@ -31,7 +31,7 @@ ADMIN_CHAT_ID = 892519055
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer("""Твоя сила — наша перевага!
-Вітаємо в боті бригади “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
+Вітаємо в боті полку “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 
 
@@ -50,7 +50,7 @@ async def cmd_heart(callback: CallbackQuery):
 
 Україна чекає на тебе
 
-Командир бригади Дмитро Олексюк
+Командир полку Дмитро Олексюк
 Подати анкету можна на сайті https://fxdpsu.com або у боті""", reply_markup=but.back)
 
 
@@ -76,7 +76,7 @@ async def cmd_heart(callback: CallbackQuery):
 @dp.callback_query(F.data =='back')
 async def cmd_start(callback: CallbackQuery):
     await callback.message.edit_text("""Твоя сила — наша перевага!
-Вітаємо в боті бригади “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
+Вітаємо в боті полку “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 # Стани анкети
 class RecruitingForm(StatesGroup):
