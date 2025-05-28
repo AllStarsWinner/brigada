@@ -31,7 +31,7 @@ ADMIN_CHAT_ID = 892519055
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer("""Твоя сила — наша перевага!
-Вітаємо в боті полку Phoenix. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
+Вітаємо в боті полку FENIX. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 
 
