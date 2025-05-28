@@ -31,7 +31,7 @@ ADMIN_CHAT_ID = 892519055
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
     await message.answer("""Твоя сила — наша перевага!
-Вітаємо в боті полку “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
+Вітаємо в боті полку Phoenix. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 
 
@@ -72,11 +72,10 @@ async def cmd_heart(callback: CallbackQuery):
     await callback.message.edit_text("""Щоб знати найсвіжіші новини та бачити статистику знищених ворожих сил, рекомендуємо підписатися на наш телеграм канал.
 Посилання: https://t.me/feniksdpsu""", reply_markup=but.back)
 
-
 @dp.callback_query(F.data =='back')
 async def cmd_start(callback: CallbackQuery):
     await callback.message.edit_text("""Твоя сила — наша перевага!
-Вітаємо в боті полку “Фенікс”. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
+Вітаємо в боті полку Phoenix. Заповни анкету, переглянь вакансії та зроби перший крок до служби в одному з найефективніших підрозділів ДПСУ.""", reply_markup=but.main_inline)
 
 # Стани анкети
 class RecruitingForm(StatesGroup):
