@@ -20,7 +20,7 @@ from but import main_inline
 #7131545198
 
 # Ініціалізація бота
-bot = Bot(token='8031989999:AAGu7uJeZkTjJyzVnEjLoNphRfGvzQjoC3c')
+bot = Bot(token='7497087386:AAEAnUS0PbKFLuRgPSUJcjc9iGPR2O1VwW8')
 dp = Dispatcher(storage=MemoryStorage())  # Обов’язково додати storage
 
 # ID адміна
