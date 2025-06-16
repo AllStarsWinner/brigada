@@ -26,7 +26,7 @@ dp = Dispatcher(storage=MemoryStorage())  # Обов’язково додати
 # ID адміна
 ADMIN_CHAT_ID = 892519055
 
-
+###########textttextexetxetxetxtx
 
 @dp.message(CommandStart())
 async def cmd_start(message: Message):
