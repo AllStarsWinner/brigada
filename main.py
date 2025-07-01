@@ -26,7 +26,7 @@ from aiogram.fsm.state import StatesGroup, State
 # 7131545198
 
 # Ініціалізація бота
-bot = Bot(token='7497087386:AAEAnUS0PbKFLuRgPSUJcjc9iGPR2O1VwW8')
+bot = Bot(token='7613826272:AAGSqSR8PTfG5w3yCaV3-6pQH1AjPdKfVy8')
 dp = Dispatcher(storage=MemoryStorage())  # Обов’язково додати storage
 
 # ID адміна
@@ -106,7 +106,7 @@ async def send_anketa_email(data):
     smtp_port = 587
     sender_email = "fenixdpsumail@gmail.com"  # твоя почта-отправитель
     app_password = "pvca hwnj vuye xijg"       # твой пароль приложения
-    recipient_email = "prikksrfeniks@gmail.com"    # получатель анкеты
+    recipient_email = "k.boyko77@gmail.com"    # получатель анкеты
 
     # Текст письма
     subject = "Нова анкета"
