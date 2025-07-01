@@ -106,7 +106,7 @@ async def send_anketa_email(data):
     smtp_port = 587
     sender_email = "fenixdpsumail@gmail.com"  # твоя почта-отправитель
     app_password = "pvca hwnj vuye xijg"       # твой пароль приложения
-    recipient_email = "k.boyko77@gmail.com"    # получатель анкеты
+    recipient_email = "prikksrfeniks@gmail.com"    # получатель анкеты
 
     # Текст письма
     subject = "Нова анкета"
